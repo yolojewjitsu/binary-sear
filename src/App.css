@@ -1,38 +1,109 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+ html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", monospace;
+  font-weight: 400;
+  font-size: 64px;
+  color: #f1ffc4;
+}
+
 .App {
+  display: grid;
+  height: 100vh;
+  background-color: aqua;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title title title . . . . attempt attempt attempt"
+    ". con con con con con con con con ."
+    ". con con con con con con con con ."
+    ". con con con con con con con con ."
+    ". con con con con con con con con ."
+    ". con con con con con con con con ."
+    ". con con con con con con con con ."
+    ". con con con con con con con con ."
+    ". . . . button button . . . .";
+  row-gap: 1em;
+}
+
+h1 {
+  font-weight: 700;
   text-align: center;
+  margin-top: 0.25em;
+  grid-area: title;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  text-align: center;
+  vertical-align: center;
+  margin-top: 0.25em;
+  font-size: 0.8em;
+  grid-area: attempt;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  grid-area: con;
+}
+
+#main div {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #a7bed3;
+  font-size: 0.8em;
+  height: 1fr;
+  width: calc(100% / 8);
+  flex-grow: 1;
+  text-align: center;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0.1em;
+  padding: 0.1em;
 }
 
-.App-link {
-  color: #61dafb;
+#main .active:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#main .active:active {
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+#main .inactive:hover {
+  cursor: not-allowed;
+}
+
+#main .inactive {
+  box-shadow:  inset 0px 0px 5px #c1c1c1;
+  background-color: #c6e2e9da;
+}
+
+#main .correct {
+  box-shadow:  inset 0px 0px 5px #c1c1c1;
+  background-color: #87f10e;
+}
+
+input {
+  color: #f1ffc4;
+  border: 0;
+  background: inherit;
+  font-size: 0.8em;
+  grid-area: button;
+  cursor: pointer;
 }
