@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yolojewjitsu/binary-sear/static/css/main.ef7935e7.css",
+    "main.js": "/yolojewjitsu/binary-sear/static/js/main.0f1dbd36.js",
+    "static/js/787.f15debd4.chunk.js": "/yolojewjitsu/binary-sear/static/js/787.f15debd4.chunk.js",
+    "index.html": "/yolojewjitsu/binary-sear/index.html",
+    "main.ef7935e7.css.map": "/yolojewjitsu/binary-sear/static/css/main.ef7935e7.css.map",
+    "main.0f1dbd36.js.map": "/yolojewjitsu/binary-sear/static/js/main.0f1dbd36.js.map",
+    "787.f15debd4.chunk.js.map": "/yolojewjitsu/binary-sear/static/js/787.f15debd4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef7935e7.css",
+    "static/js/main.0f1dbd36.js"
+  ]
+}
